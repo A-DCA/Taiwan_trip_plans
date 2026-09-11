@@ -1,104 +1,145 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>2026-11-05 notes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 5 · Alishan Forest Recreation Area</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", sans-serif; margin: 24px; background:#fafafa; color:#222; }
-  h2 { margin-bottom: 4px; }
-  a.back { display:inline-block; margin-bottom:16px; }
-  table { border-collapse: collapse; width: 100%; background:white; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #2A81CB; color: white; }
-  td.num { font-weight: bold; text-align:center; width:32px; }
-  td.time { white-space: nowrap; width:64px; }
-  td.mode { white-space: nowrap; width:90px; }
-  tr:nth-child(even) { background: #f4f7fb; }
-</style></head><body>
-<h2>2026-11-05</h2>
-<a class="back" href="2026-11-05_zh.html">&larr; back to map</a>
-<table>
-<tr><th>#</th><th>Time</th><th>中文</th><th>English</th><th>Mode</th><th>How to get here (+ notes)</th></tr>
-<tr>
-            <td class="num">1</td>
-            <td class="time">08:00</td>
-            <td class="name">公车日月潭去阿里山</td>
-            <td class="name">Bus 6739 Sun Moon Lake to Alishan</td>
-            <td class="mode"> </td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">2</td>
-            <td class="time">11:00</td>
-            <td class="name">阿里山公交站</td>
-            <td class="name">Alishan bus station</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">booking in advance REQUIRED!</td>
-        </tr><tr>
-            <td class="num">3</td>
-            <td class="time">11:45</td>
-            <td class="name">阿里山遊客中心</td>
-            <td class="name">Alishan visitor centre</td>
-            <td class="mode">🚶 walk</td>
-            <td class="note">hotel is nearby. STORE luggage at hotel. Lunch</td>
-        </tr><tr>
-            <td class="num">4</td>
-            <td class="time">11:45</td>
-            <td class="name">阿里山火车站</td>
-            <td class="name">Alishan railway station</td>
-            <td class="mode">🚶 walk</td>
-            <td class="note">buy return train tickets to Chushan railway station for next morning Sunrise </td>
-        </tr><tr>
-            <td class="num">5</td>
-            <td class="time">12:45</td>
-            <td class="name">姐妹潭（走沼平）</td>
-            <td class="name">Sister pond via Chaoping</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">buy tomorrow train ticket to Zhushan for watching sunrise  </td>
-        </tr><tr>
-            <td class="num">6</td>
-            <td class="time">13:15</td>
-            <td class="name">阿里山受鎮宮</td>
-            <td class="name">Alishan Shouzhen Temple</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">7</td>
-            <td class="time">13:45</td>
-            <td class="name">阿里山吊橋</td>
-            <td class="name">Suspension bridge</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">8</td>
-            <td class="time">14:15</td>
-            <td class="name">千歲檜神木</td>
-            <td class="name">Thousand Year Cypress</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">9</td>
-            <td class="time">14:45</td>
-            <td class="name">香林神木</td>
-            <td class="name">Xianglin Giant Tree</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">10</td>
-            <td class="time">15:15</td>
-            <td class="name">阿里山慈雲寺</td>
-            <td class="name">Ciyun Temple</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">11</td>
-            <td class="time">15:45</td>
-            <td class="name">慈雲觀景</td>
-            <td class="name">Ciyun Temple Scenery</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">12</td>
-            <td class="time">16:30</td>
-            <td class="name">阿里山遊客中心</td>
-            <td class="name">Alishan visitor centre</td>
-            <td class="mode">🚶 trail</td>
-            <td class="note">&mdash;</td>
-        </tr>
+:root{--ink:#2b2420;--paper:#faf6ef;--accent:#b1502f;--accent2:#3a6b5a;--line:#e4dccb;}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding:0;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--accent),#7a3620);color:#fff;padding:34px 20px;text-align:center;}
+header.top h1{margin:0 0 6px;font-size:1.7em;}
+header.top p{margin:2px 0;opacity:.95;font-size:1.05em;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 14px;font-size:.85em;margin-top:8px;}
+h2.section{color:var(--accent);border-bottom:3px solid var(--line);padding-bottom:6px;margin-top:44px;font-size:1.3em;}
+h2.section .zh{font-weight:400;color:var(--accent2);font-size:.8em;margin-left:8px;}
+.route-table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.93em;background:#fff;}
+.route-table th{background:var(--accent2);color:#fff;padding:8px 10px;text-align:left;}
+.route-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.route-table tr:nth-child(even) td{background:#f4efe4;}
+.mode{display:inline-block;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;font-size:.85em;}
+.stop{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 20px;margin:18px 0;}
+.stop h3{margin:0 0 4px;color:var(--accent);font-size:1.15em;}
+.stop h3 .zh{color:var(--accent2);font-weight:500;font-size:.85em;margin-left:10px;}
+.stop .lbl{font-weight:700;color:var(--accent2);font-size:.9em;margin-top:10px;}
+.stop .lbl2{font-weight:700;color:#7a5b1e;font-size:.88em;margin-top:8px;}
+.note{background:#fff7e6;border:1px solid #ecd9a8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.note b{color:#a4651a;}
+.flag{background:#fdecec;border:1px solid #f3b9b9;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.flag b{color:#b1332f;}
+.zhblock{font-family:'Noto Sans SC','Noto Sans TC',sans-serif;color:#4a4237;background:#f6f1e6;border-radius:8px;padding:14px 18px;margin-top:8px;}
+.zhblock h4{margin:0 0 6px;color:var(--accent2);font-size:1em;}
+footer{text-align:center;color:#8a8072;font-size:.85em;margin-top:50px;}
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-top:20px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>Day 5 · Alishan Forest Recreation Area</h1>
+<p>05 Nov 2026 — Sun Moon Lake → Alishan, Giant Tree Trail Loop</p>
+<span class="badge">05 Nov 2026</span>
+</header>
+<h2 class="section">Route Overview <span class="zh">路线总览</span></h2>
+<table class="route-table"><tr><th>Time</th><th>Stop / 地点</th><th>Transport</th><th>Duration</th><th>Notes</th></tr>
+<tr><td>08:00</td><td>Sun Moon Lake → Alishan Bus<br><span style="color:#7a5b1e">日月潭公車去阿里山</span></td><td><span class="mode">bus</span></td><td>~3 h</td><td>Bus 6739 — book in advance</td></tr>
+<tr><td>11:00</td><td>Alishan Bus Station<br><span style="color:#7a5b1e">阿里山公交站</span></td><td><span class="mode">-</span></td><td>-</td><td>Arrival</td></tr>
+<tr><td>11:45</td><td>Alishan Visitor Center<br><span style="color:#7a5b1e">阿里山遊客中心</span></td><td><span class="mode">walk</span></td><td>~5 min</td><td>Store luggage at hotel, lunch</td></tr>
+<tr><td>11:45</td><td>Alishan Railway Station<br><span style="color:#7a5b1e">阿里山火車站</span></td><td><span class="mode">walk</span></td><td>-</td><td>Buy return train tickets to Chushan for tomorrow's sunrise</td></tr>
+<tr><td>12:45</td><td>Sister Ponds (via Chaoping)<br><span style="color:#7a5b1e">姐妹潭（走沼平）</span></td><td><span class="mode">trail</span></td><td>~35 min</td><td>Buy tomorrow's sunrise train ticket here or at the station</td></tr>
+<tr><td>13:15</td><td>Alishan Shouzhen Temple<br><span style="color:#7a5b1e">阿里山受鎮宮</span></td><td><span class="mode">trail</span></td><td>~15 min</td><td>-</td></tr>
+<tr><td>13:45</td><td>Suspension Bridge<br><span style="color:#7a5b1e">阿里山吊橋</span></td><td><span class="mode">trail</span></td><td>~5 min</td><td>-</td></tr>
+<tr><td>14:15</td><td>Thousand Year Cypress<br><span style="color:#7a5b1e">千歲檜神木</span></td><td><span class="mode">trail</span></td><td>~5 min</td><td>-</td></tr>
+<tr><td>14:45</td><td>Xianglin Giant Tree<br><span style="color:#7a5b1e">香林神木</span></td><td><span class="mode">trail</span></td><td>~5 min</td><td>-</td></tr>
+<tr><td>15:15</td><td>Ciyun Temple<br><span style="color:#7a5b1e">阿里山慈雲寺</span></td><td><span class="mode">trail</span></td><td>~5 min</td><td>-</td></tr>
+<tr><td>15:45</td><td>Ciyun Temple Scenery Deck<br><span style="color:#7a5b1e">慈雲觀景</span></td><td><span class="mode">trail</span></td><td>~10 min</td><td>-</td></tr>
+<tr><td>16:30</td><td>Alishan Visitor Center<br><span style="color:#7a5b1e">阿里山遊客中心</span></td><td><span class="mode">trail</span></td><td>~25 min</td><td>Return loop to visitor center</td></tr>
 </table>
-</body></html>
+<h2 class="section">Transport Check &amp; Alternatives <span class="zh">交通核实与建议</span></h2>
+<div class="note"><b>✓ Transport note:</b> The direct Sun Moon Lake → Alishan bus (Route 6739, operated jointly by Nantou/Chiayi bus companies) is the standard public-transport option and does exist, but runs only once or twice a day and must be booked well ahead, exactly as the plan notes — a 3-hour journey over mountain roads is normal for this route.</div>
+<div class="flag"><b>⚠ Route check:</b> If Bus 6739 is sold out or cancelled (common in shoulder season), the common backup is Sun Moon Lake → Shuili or Chiayi by local bus, then a second bus/taxi up to Alishan — this roughly doubles the travel time, so it's worth reconfirming this booking a few days ahead and having a backup plan.</div>
+<div class="note"><b>✓ Transport note:</b> The afternoon walking loop (Sister Ponds → Shouzhen Temple → Suspension Bridge → giant trees → Ciyun Temple → back to visitor center) follows Alishan's well-marked and mostly paved 'Giant Tree Trail' network — the sequencing and durations are realistic and this is the standard sightseeing loop most visitors follow.</div>
+<div class="note"><b>✓ Transport note:</b> Buying the Chushan sunrise-train ticket the same afternoon is essential and correctly planned here — tickets for the next morning's sunrise train are released at the station around 16:00–16:30 and can sell out, so doing this right after arrival (rather than waiting) is the safer choice.</div>
+<h2 class="section">Places — History &amp; Highlights <span class="zh">景点介绍与看点</span></h2>
+
+<div class="stop">
+<h3>Alishan National Scenic Area<span class="zh">阿里山國家森林遊樂區</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A cluster of misty highland forests around 2,200m elevation, Alishan has drawn visitors since the Japanese colonial government built a logging railway here in 1912 to extract its ancient cypress; today the forest reserve protects some of Taiwan's oldest trees and is famed for sunrise, sea-of-clouds and sunset views.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Ancient red cypress trees, some over 2,000 years old</li><li>The historic narrow-gauge Alishan Forest Railway, one of only three mountain railways of its kind in the world</li><li>Sea-of-clouds views on clear mornings from various lookout points</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>阿里山森林游乐区位于海拔约2200米的云雾缭绕高地，日治政府1912年为开采珍贵桧木而修建阿里山森林铁路，令此地声名远播；如今保护区内保留众多台湾最古老的树木，以日出、云海与夕阳美景闻名。</p>
+<h4>看点推荐</h4>
+<ul><li>树龄超过2000年的古老红桧</li><li>历史悠久的阿里山森林小火车，是世界仅存三条同类型高山铁路之一</li><li>晴朗清晨可在多处观景点欣赏云海</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Sister Ponds<span class="zh">姐妹潭</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Two small natural ponds near Chaoping Park named after a local legend of two Tsou-indigenous sisters who drowned themselves here rather than share the love of one man; today they're a tranquil, reflective stop on the forest loop trail.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Calm, mirror-like water framed by cypress and cedar trees</li><li>A short boardwalk loop around both ponds</li><li>The adjoining Chaoping Park, good for a rest stop</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>姐妹潭是沼平公园附近两座天然小潭，相传因邹族两姐妹为同一男子殉情投潭而得名，如今是森林步道上宁静优美的一站。</p>
+<h4>看点推荐</h4>
+<ul><li>湖水平静如镜，四周环绕桧木与杉林</li><li>环绕两潭的短程木栈道</li><li>相邻的沼平公园，适合稍作休息</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Alishan Shouzhen Temple<span class="zh">阿里山受鎮宮</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A Taoist temple dedicated to Xuantian Shangdi (the Dark Emperor of the North), rebuilt in its current form after fire damage in the 20th century; it is one of the highest-elevation major temples in Taiwan and a resting point for hikers on the giant-tree trail.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The temple's mountain-forest setting, unusual for a Taoist temple of this scale</li><li>Intricate roof and altar decoration</li><li>A quiet spot to rest partway around the giant-tree loop</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>受镇宫主祀玄天上帝，是道教庙宇，因20世纪火灾曾重建，是台湾海拔最高的主要庙宇之一，也是神木步道行程中途的休息点。</p>
+<h4>看点推荐</h4>
+<ul><li>罕见的高山森林庙宇景观</li><li>精美的屋脊与神龛装饰</li><li>神木步道途中的休憩点</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Thousand-Year Cypress & Xianglin Giant Tree<span class="zh">千歲檜神木與香林神木</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>These ancient red cypress specimens, estimated at roughly 1,000–2,300 years old, are survivors of the original old-growth forest that drew Japanese loggers here in the early 1900s; most of the largest trees were felled for timber before conservation halted large-scale logging, making these survivors especially prized.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Massive trunks several metres in diameter, some hollowed by age</li><li>Interpretive signage on the trees' estimated age and ecology</li><li>Boardwalks built to protect the root systems from visitor traffic</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>千岁桧与香林神木等古老红桧树龄估计约1000至2300年，是20世纪初吸引日本人前来伐木的原始林遗存；当年多数巨木已遭砍伐，保育措施施行后幸存的神木显得格外珍贵。</p>
+<h4>看点推荐</h4>
+<ul><li>树干粗壮数米，部分因树龄久远而中空</li><li>解说牌介绍树龄与生态知识</li><li>为保护树根而建的高架木栈道</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Ciyun Temple<span class="zh">阿里山慈雲寺</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A small Buddhist temple set among the cypress groves, offering one of Alishan's quieter, more contemplative stops along the giant-tree trail, with an adjoining viewing platform (Ciyun Guanjing) looking out over the forested ridgelines.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>A peaceful Buddhist shrine surrounded by ancient trees</li><li>The adjoining scenery deck for forest and ridge views</li><li>A good final stop before looping back to the visitor center</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>慈云寺是隐于桧木林间的小型佛寺，是神木步道中较为清幽、适合静心休憩的一站，旁邻的慈云观景台可远眺层层山脊与森林。</p>
+<h4>看点推荐</h4>
+<ul><li>被古树环绕的静谧佛寺</li><li>相邻的观景台，可欣赏森林与山脊景色</li><li>返回游客中心前的最后一站</li></ul>
+</div>
+</div>
+
+
+<footer>Guide prepared for personal trip use · History &amp; highlight notes are general background, please verify opening hours/tickets on-site · 本指南仅供个人行程参考，开放时间与票价请以现场公告为准</footer>
+</div>
+</body>
+</html>

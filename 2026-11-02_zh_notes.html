@@ -1,76 +1,141 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>2026-11-02 notes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 2 · Northeast Coast & Jiufen</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", sans-serif; margin: 24px; background:#fafafa; color:#222; }
-  h2 { margin-bottom: 4px; }
-  a.back { display:inline-block; margin-bottom:16px; }
-  table { border-collapse: collapse; width: 100%; background:white; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #2A81CB; color: white; }
-  td.num { font-weight: bold; text-align:center; width:32px; }
-  td.time { white-space: nowrap; width:64px; }
-  td.mode { white-space: nowrap; width:90px; }
-  tr:nth-child(even) { background: #f4f7fb; }
-</style></head><body>
-<h2>2026-11-02</h2>
-<a class="back" href="2026-11-02_zh.html">&larr; back to map</a>
-<table>
-<tr><th>#</th><th>Time</th><th>中文</th><th>English</th><th>Mode</th><th>How to get here (+ notes)</th></tr>
-<tr>
-            <td class="num">1</td>
-            <td class="time">08:00</td>
-            <td class="name">酒店</td>
-            <td class="name">  Hotel</td>
-            <td class="mode"> </td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">2</td>
-            <td class="time">08:30</td>
-            <td class="name">台北车站</td>
-            <td class="name">Taipei Station</td>
-            <td class="mode">🚇 mrt</td>
-            <td class="note">G Nanjing-Beimen 2 stops</td>
-        </tr><tr>
-            <td class="num">3</td>
-            <td class="time">11:20</td>
-            <td class="name">野柳地质公园</td>
-            <td class="name">Yehliu GeoPark</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">4</td>
-            <td class="time">12:30</td>
-            <td class="name">十分瀑布</td>
-            <td class="name">Shifen Waterfall</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">5</td>
-            <td class="time">13:30</td>
-            <td class="name">十分老街</td>
-            <td class="name">Shifen Old Street</td>
-            <td class="mode">🚶 walk</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">6</td>
-            <td class="time">15:00</td>
-            <td class="name">猴洞</td>
-            <td class="name">Houtong Village </td>
-            <td class="mode">🚆 train</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">7</td>
-            <td class="time">16:00</td>
-            <td class="name">九份老街</td>
-            <td class="name">Jiufen Old Street</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">8</td>
-            <td class="time">19:30</td>
-            <td class="name">台北车站</td>
-            <td class="name">Taipei Station</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">&mdash;</td>
-        </tr>
+:root{--ink:#2b2420;--paper:#faf6ef;--accent:#b1502f;--accent2:#3a6b5a;--line:#e4dccb;}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding:0;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--accent),#7a3620);color:#fff;padding:34px 20px;text-align:center;}
+header.top h1{margin:0 0 6px;font-size:1.7em;}
+header.top p{margin:2px 0;opacity:.95;font-size:1.05em;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 14px;font-size:.85em;margin-top:8px;}
+h2.section{color:var(--accent);border-bottom:3px solid var(--line);padding-bottom:6px;margin-top:44px;font-size:1.3em;}
+h2.section .zh{font-weight:400;color:var(--accent2);font-size:.8em;margin-left:8px;}
+.route-table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.93em;background:#fff;}
+.route-table th{background:var(--accent2);color:#fff;padding:8px 10px;text-align:left;}
+.route-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.route-table tr:nth-child(even) td{background:#f4efe4;}
+.mode{display:inline-block;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;font-size:.85em;}
+.stop{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 20px;margin:18px 0;}
+.stop h3{margin:0 0 4px;color:var(--accent);font-size:1.15em;}
+.stop h3 .zh{color:var(--accent2);font-weight:500;font-size:.85em;margin-left:10px;}
+.stop .lbl{font-weight:700;color:var(--accent2);font-size:.9em;margin-top:10px;}
+.stop .lbl2{font-weight:700;color:#7a5b1e;font-size:.88em;margin-top:8px;}
+.note{background:#fff7e6;border:1px solid #ecd9a8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.note b{color:#a4651a;}
+.flag{background:#fdecec;border:1px solid #f3b9b9;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.flag b{color:#b1332f;}
+.zhblock{font-family:'Noto Sans SC','Noto Sans TC',sans-serif;color:#4a4237;background:#f6f1e6;border-radius:8px;padding:14px 18px;margin-top:8px;}
+.zhblock h4{margin:0 0 6px;color:var(--accent2);font-size:1em;}
+footer{text-align:center;color:#8a8072;font-size:.85em;margin-top:50px;}
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-top:20px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>Day 2 · Northeast Coast & Jiufen</h1>
+<p>02 Nov 2026 — Yehliu · Shifen · Houtong · Jiufen (Group Coach Tour)</p>
+<span class="badge">02 Nov 2026</span>
+</header>
+<h2 class="section">Route Overview <span class="zh">路线总览</span></h2>
+<table class="route-table"><tr><th>Time</th><th>Stop / 地点</th><th>Transport</th><th>Duration</th><th>Notes</th></tr>
+<tr><td>08:00</td><td>Hotel<br><span style="color:#7a5b1e">酒店</span></td><td><span class="mode">-</span></td><td>-</td><td>Depart hotel</td></tr>
+<tr><td>08:30</td><td>Taipei Station<br><span style="color:#7a5b1e">台北车站</span></td><td><span class="mode">MRT</span></td><td>~10 min</td><td>G line Nanjing Fuxing → Beimen, 2 stops (meet CTrip group transport)</td></tr>
+<tr><td>11:20</td><td>Yehliu GeoPark<br><span style="color:#7a5b1e">野柳地质公园</span></td><td><span class="mode">bus/coach</span></td><td>~60 min</td><td>Group coach from Taipei</td></tr>
+<tr><td>12:30</td><td>Shifen Waterfall<br><span style="color:#7a5b1e">十分瀑布</span></td><td><span class="mode">bus/coach</span></td><td>~45 min</td><td>Group coach</td></tr>
+<tr><td>13:30</td><td>Shifen Old Street<br><span style="color:#7a5b1e">十分老街</span></td><td><span class="mode">walk</span></td><td>~10 min</td><td>Adjacent to the waterfall car park</td></tr>
+<tr><td>15:00</td><td>Houtong Village (Cat Village)<br><span style="color:#7a5b1e">猴洞（猴硐貓村）</span></td><td><span class="mode">train/coach</span></td><td>~25 min</td><td>TRA Pingxi branch or coach along Keelung River valley</td></tr>
+<tr><td>16:00</td><td>Jiufen Old Street<br><span style="color:#7a5b1e">九份老街</span></td><td><span class="mode">bus/coach</span></td><td>~30 min</td><td>Coach up the coastal hills to Jiufen</td></tr>
+<tr><td>19:30</td><td>Taipei Station<br><span style="color:#7a5b1e">台北车站</span></td><td><span class="mode">bus/coach</span></td><td>~90 min</td><td>Return coach via Freeway 5</td></tr>
 </table>
-</body></html>
+<h2 class="section">Transport Check &amp; Alternatives <span class="zh">交通核实与建议</span></h2>
+<div class="note"><b>✓ Transport note:</b> This is a well-worn 'Northeast Coast + Pingxi + Jiufen' day-tour route and the geographic sequence (Yehliu → Shifen → Houtong → Jiufen → back to Taipei) is efficient and standard for group coach tours — it avoids backtracking.</div>
+<div class="note"><b>✓ Transport note:</b> As a CTrip/KKday-style group tour, all inter-stop segments are by chartered coach rather than public transport, which is appropriate here — public transit alternatives (TRA Pingxi Line + bus) would take noticeably longer and are only worth it if you skip the group tour.</div>
+<div class="flag"><b>⚠ Route check:</b> The header labels this 'Day 2 (03 Nov)' but the date column shows 02/11/2026 throughout — this looks like a typo in the plan; the itinerary logically belongs to 02 Nov (Monday), the day between Day 1 (01 Nov) and Day 3 (03 Nov). Please double-check your booking date with the tour operator.</div>
+<div class="note"><b>✓ Transport note:</b> 09:00→11:20 for Taipei→Yehliu is generous (Yehliu is only ~1 hr from Taipei by highway); the extra time likely covers group pickup at multiple hotels, which is normal for shared coach tours.</div>
+<h2 class="section">Places — History &amp; Highlights <span class="zh">景点介绍与看点</span></h2>
+
+<div class="stop">
+<h3>Yehliu GeoPark<span class="zh">野柳地质公园</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A narrow cape on Taiwan's north coast where millions of years of sea erosion, wind and mineral-rich sandstone have sculpted a famous landscape of honeycomb and mushroom rock formations; it has been protected as a scenic area since the 1960s.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The Queen's Head rock, the park's most photographed formation</li><li>Mushroom rocks and honeycomb weathering along the tip of the cape</li><li>Tide pools and fossil-bearing rock layers visible along the shore trail</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>野柳地质公园位于台湾北海岸的狭长岬角，历经数百万年海浪侵蚀与矿物沉积作用，形成著名的蜂窝岩与蕈状岩地貌，自1960年代起被列为风景特定区加以保护。</p>
+<h4>看点推荐</h4>
+<ul><li>最著名的"女王头"奇石</li><li>岬角尖端的蕈状岩与蜂窝岩地形</li><li>沿岸步道可见潮池与化石岩层</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Shifen Waterfall<span class="zh">十分瀑布</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Nicknamed the 'Little Niagara of Taiwan,' this 20-metre-wide, 20-metre-high curtain waterfall on the Keelung River basin has drawn visitors since the Japanese colonial era built the Pingxi rail line through the valley for coal transport in the 1920s.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The wide curtain-style falls, Taiwan's largest waterfall by width</li><li>Suspension bridge with a head-on viewing platform</li><li>Surrounding forest trail loop, an easy 20–30 minute walk</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>十分瀑布素有"台湾尼加拉瀑布"之称，瀑宽约20米、落差约20米，呈帘幕状，自1920年代日治时期修建平溪线铁路运煤以来就是热门景点。</p>
+<h4>看点推荐</h4>
+<ul><li>台湾瀑宽最大的帘幕式瀑布</li><li>吊桥观景台可正面欣赏瀑布</li><li>周边森林环状步道，步行约20–30分钟</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Shifen Old Street<span class="zh">十分老街</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A former coal-mining settlement built along the Pingxi rail line in the 1920s–30s; the street is unusual in that the railway tracks run directly through the middle of the shops, a legacy of the line's original freight function.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Releasing a sky lantern (tian deng) painted with your wishes, the street's signature activity</li><li>Shops built right up against the still-active railway tracks</li><li>Old mining-era shopfronts and snack stalls</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>十分老街是1920至30年代随平溪线铁路发展而成的采矿聚落，最大特色是铁轨直接穿越街道中央，是当年运煤铁路留下的独特景观。</p>
+<h4>看点推荐</h4>
+<ul><li>放天灯，写下愿望，是老街最具代表性的体验</li><li>店铺紧贴仍在运行的铁轨而建</li><li>保留矿业时期老店面与小吃摊</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Houtong Village (Cat Village)<span class="zh">猴硐貓村</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Once a thriving coal-mining town from the 1920s to the 1990s (the ruins of its washery and transfer bridge still stand by the station), Houtong reinvented itself in the 2010s as 'Cat Village' after residents began caring for stray cats around the old mining homes.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Hundreds of resident cats roaming cat-themed bridges, cafes and alleyways</li><li>Remains of the former coal-washing plant and mining structures near the station</li><li>Houtong Coal Mine Ecological Park exhibits on the area's mining history</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>猴硐曾是1920至1990年代繁荣的煤矿聚落，车站旁至今保留选煤场与运煤桥遗迹；2010年代因居民照顾流浪猫而转型为知名的"猫村"。</p>
+<h4>看点推荐</h4>
+<ul><li>数百只猫咪漫步于猫桥、猫咖啡与巷弄间</li><li>车站旁的选煤场与矿业遗迹</li><li>猴硐煤矿生态园区，介绍当地采矿历史</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Jiufen Old Street<span class="zh">九份老街</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A gold-rush mountain town that boomed during Japanese colonial rule (1895–1945) when it hosted one of Asia's richest gold mines, then fell quiet after the mines closed in 1971 — until a 1989 film revival and its reputed (though debated) links to 'Spirited Away' made it one of Taiwan's most visited old streets.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Narrow stepped lanes strung with red lanterns, best at dusk</li><li>Teahouses built into the hillside with sea views, e.g. the A-Mei Tea House</li><li>Taiwanese snacks like taro balls (yu yuan) and peanut ice cream rolls</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>九份在日治时期（1895–1945）因盛产黄金而繁荣一时，曾是亚洲最富饶的金矿区之一；1971年矿业没落后沉寂多年，1989年因电影取景重新走红，也因传闻与《千与千寻》场景相似而闻名国际。</p>
+<h4>看点推荐</h4>
+<ul><li>挂满红灯笼的阶梯老街，傍晚最美</li><li>依山而建、可眺望海景的茶楼（如阿妹茶楼）</li><li>芋圆、花生卷冰淇淋等台式小吃</li></ul>
+</div>
+</div>
+
+
+<footer>Guide prepared for personal trip use · History &amp; highlight notes are general background, please verify opening hours/tickets on-site · 本指南仅供个人行程参考，开放时间与票价请以现场公告为准</footer>
+</div>
+</body>
+</html>

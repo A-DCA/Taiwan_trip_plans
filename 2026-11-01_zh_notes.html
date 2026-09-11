@@ -1,69 +1,140 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>2026-11-01 notes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 1 · Taipei — Dadaocheng, Shilin & Beitou</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", sans-serif; margin: 24px; background:#fafafa; color:#222; }
-  h2 { margin-bottom: 4px; }
-  a.back { display:inline-block; margin-bottom:16px; }
-  table { border-collapse: collapse; width: 100%; background:white; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #2A81CB; color: white; }
-  td.num { font-weight: bold; text-align:center; width:32px; }
-  td.time { white-space: nowrap; width:64px; }
-  td.mode { white-space: nowrap; width:90px; }
-  tr:nth-child(even) { background: #f4f7fb; }
-</style></head><body>
-<h2>2026-11-01</h2>
-<a class="back" href="2026-11-01_zh.html">&larr; back to map</a>
-<table>
-<tr><th>#</th><th>Time</th><th>中文</th><th>English</th><th>Mode</th><th>How to get here (+ notes)</th></tr>
-<tr>
-            <td class="num">1</td>
-            <td class="time">09:00</td>
-            <td class="name">酒店</td>
-            <td class="name">  Hotel</td>
-            <td class="mode"> </td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">2</td>
-            <td class="time">09:30</td>
-            <td class="name">迪化街</td>
-            <td class="name">Dihua Street</td>
-            <td class="mode">🚇 mrt</td>
-            <td class="note">Bus 306/G Nanjing-Zhongshan</td>
-        </tr><tr>
-            <td class="num">3</td>
-            <td class="time">11:30</td>
-            <td class="name">士林官邸正館</td>
-            <td class="name">Chiang Kai-Shek Shilin Residence</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">Bus 304 Chongqing N. from Yanping Station 1 (Nanjing) to Fu Lin Elementary School</td>
-        </tr><tr>
-            <td class="num">4</td>
-            <td class="time">13:30</td>
-            <td class="name">國立故宮博物院</td>
-            <td class="name">National Palace Museum</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">304 Chongqing N；255 Shuttle Bus； 815</td>
-        </tr><tr>
-            <td class="num">5</td>
-            <td class="time">17:00</td>
-            <td class="name">北投公園溫泉浴池</td>
-            <td class="name">Beitou public Hotspring</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">BeihuanML/255/815/957 from Gugong Rd Inresection to Shilin Station, change Chengde ML; 645 from GG Rd Intersec. To Yongming Police Station, change 223;  </td>
-        </tr><tr>
-            <td class="num">6</td>
-            <td class="time">19:30</td>
-            <td class="name">士林夜市</td>
-            <td class="name">Shilin Night Market</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">Bus 218/Shuttle Chengde Main line from Beitou Park to Jiantan Station   </td>
-        </tr><tr>
-            <td class="num">7</td>
-            <td class="time">21:00</td>
-            <td class="name">酒店</td>
-            <td class="name">  Hotel</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">Shuttle Chengde Main line from Jiantan Station to Songjiang Nanjing Station; walking around and dinner </td>
-        </tr>
+:root{--ink:#2b2420;--paper:#faf6ef;--accent:#b1502f;--accent2:#3a6b5a;--line:#e4dccb;}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding:0;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--accent),#7a3620);color:#fff;padding:34px 20px;text-align:center;}
+header.top h1{margin:0 0 6px;font-size:1.7em;}
+header.top p{margin:2px 0;opacity:.95;font-size:1.05em;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 14px;font-size:.85em;margin-top:8px;}
+h2.section{color:var(--accent);border-bottom:3px solid var(--line);padding-bottom:6px;margin-top:44px;font-size:1.3em;}
+h2.section .zh{font-weight:400;color:var(--accent2);font-size:.8em;margin-left:8px;}
+.route-table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.93em;background:#fff;}
+.route-table th{background:var(--accent2);color:#fff;padding:8px 10px;text-align:left;}
+.route-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.route-table tr:nth-child(even) td{background:#f4efe4;}
+.mode{display:inline-block;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;font-size:.85em;}
+.stop{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 20px;margin:18px 0;}
+.stop h3{margin:0 0 4px;color:var(--accent);font-size:1.15em;}
+.stop h3 .zh{color:var(--accent2);font-weight:500;font-size:.85em;margin-left:10px;}
+.stop .lbl{font-weight:700;color:var(--accent2);font-size:.9em;margin-top:10px;}
+.stop .lbl2{font-weight:700;color:#7a5b1e;font-size:.88em;margin-top:8px;}
+.note{background:#fff7e6;border:1px solid #ecd9a8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.note b{color:#a4651a;}
+.flag{background:#fdecec;border:1px solid #f3b9b9;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.flag b{color:#b1332f;}
+.zhblock{font-family:'Noto Sans SC','Noto Sans TC',sans-serif;color:#4a4237;background:#f6f1e6;border-radius:8px;padding:14px 18px;margin-top:8px;}
+.zhblock h4{margin:0 0 6px;color:var(--accent2);font-size:1em;}
+footer{text-align:center;color:#8a8072;font-size:.85em;margin-top:50px;}
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-top:20px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>Day 1 · Taipei — Dadaocheng, Shilin & Beitou</h1>
+<p>Sun 01 Nov 2026 — Old Street, Palace Museum, Hot Spring & Night Market</p>
+<span class="badge">01 Nov 2026</span>
+</header>
+<h2 class="section">Route Overview <span class="zh">路线总览</span></h2>
+<table class="route-table"><tr><th>Time</th><th>Stop / 地点</th><th>Transport</th><th>Duration</th><th>Notes</th></tr>
+<tr><td>09:00</td><td>Hotel<br><span style="color:#7a5b1e">酒店</span></td><td><span class="mode">-</span></td><td>-</td><td>Depart hotel</td></tr>
+<tr><td>09:30</td><td>Dihua Street<br><span style="color:#7a5b1e">迪化街</span></td><td><span class="mode">bus/MRT</span></td><td>~20 min</td><td>Bus 306 or MRT G line Nanjing Fuxing→Zhongshan, then walk ~10 min</td></tr>
+<tr><td>11:30</td><td>Chiang Kai-Shek Shilin Residence<br><span style="color:#7a5b1e">士林官邸正館</span></td><td><span class="mode">bus</span></td><td>~40 min</td><td>Bus 304 from Yanping Station (Nanjing Rd) to Fu Lin Elementary School stop</td></tr>
+<tr><td>13:30</td><td>National Palace Museum<br><span style="color:#7a5b1e">國立故宮博物院</span></td><td><span class="mode">bus</span></td><td>~20 min</td><td>Bus 304, 255 shuttle, or 815</td></tr>
+<tr><td>17:00</td><td>Beitou Public Hot Spring<br><span style="color:#7a5b1e">北投公園溫泉浴池</span></td><td><span class="mode">bus</span></td><td>~60 min</td><td>Multiple transfers via Shilin/Chengde Rd — see note below</td></tr>
+<tr><td>19:30</td><td>Shilin Night Market<br><span style="color:#7a5b1e">士林夜市</span></td><td><span class="mode">bus</span></td><td>~40 min</td><td>Bus 218 or Chengde-line shuttle, Beitou Park → Jiantan Station</td></tr>
+<tr><td>21:00</td><td>Hotel<br><span style="color:#7a5b1e">酒店</span></td><td><span class="mode">bus</span></td><td>~30 min</td><td>Chengde-line shuttle, Jiantan → Songjiang Nanjing</td></tr>
 </table>
-</body></html>
+<h2 class="section">Transport Check &amp; Alternatives <span class="zh">交通核实与建议</span></h2>
+<div class="note"><b>✓ Transport note:</b> Dihua St ↔ Shilin Residence ↔ Palace Museum ↔ Beitou ↔ Shilin Market ↔ Hotel forms a rough north-south then back-south loop across Taipei's Shilin/Beitou district — the sequencing is sound, but it is a long, transfer-heavy bus day.</div>
+<div class="flag"><b>⚠ Route check:</b> The 17:00 leg (Palace Museum → Beitou hot spring) at 60 minutes with multiple transfers is the weakest link. A simpler alternative: take Bus 255 or Red 30 from the Museum to Shilin MRT Station (~15 min), then MRT Red Line to Beitou, then the free Xin Beitou shuttle or a 10-minute walk to Beitou Park (total ~35–40 min, one transfer instead of two).</div>
+<div class="note"><b>✓ Transport note:</b> Beitou → Shilin Night Market is best done via MRT: Xinbeitou→Beitou→Shilin (Red Line, ~15 min) is faster and simpler than the bus routing shown, and avoids evening traffic on Chengde Rd.</div>
+<div class="flag"><b>⚠ Route check:</b> Given the museum alone easily takes 2–3 hours and this is already a packed day, consider dropping the Beitou hot-spring soak (or shortening it to a quick foot-bath) if you want to arrive at Shilin Night Market with energy for dinner.</div>
+<h2 class="section">Places — History &amp; Highlights <span class="zh">景点介绍与看点</span></h2>
+
+<div class="stop">
+<h3>Dihua Street<span class="zh">迪化街</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Taipei's oldest surviving commercial street, built up from the 1850s as the hub of the Dadaocheng trading district; its unbroken row of Baroque, Qing- and Japanese-era shophouses once anchored Taiwan's tea, herbal medicine and dry-goods trade with mainland China and beyond.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Rows of preserved 19th-century shophouse façades</li><li>Yongle Market and traditional dried-goods/herbal medicine shops</li><li>Xiahai City God Temple tucked mid-street, famous for matchmaking blessings</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>迪化街是台北现存最古老的商业街道，19世纪中叶开始发展，是大稻埕贸易区的核心，曾是台湾茶叶、中药材与南北货贸易的重镇，至今保留大量巴洛克式与闽南式老屋立面。</p>
+<h4>看点推荐</h4>
+<ul><li>成排保存完好的19世纪老式店屋立面</li><li>永乐市场与传统南北货、中药行</li><li>街区中段的霞海城隍庙，以月老姻缘闻名</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Chiang Kai-Shek Shilin Residence<span class="zh">士林官邸正館</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Built in 1950 as the official residence of President Chiang Kai-shek and his wife Soong Mei-ling, this compound of gardens and villas served as their home for over 25 years and offers a rare, intimate look at Taiwan's mid-20th-century political history.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The Chinese and Western-style gardens, especially the rose garden</li><li>The original residence building (guided/self-tour areas)</li><li>Greenhouse and chapel used by the Chiang family</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>士林官邸建于1950年，是蒋中正与宋美龄的官邸，两人在此居住超过二十五年，园内保留中式与西式庭园，是了解台湾近代政治史的重要场所。</p>
+<h4>看点推荐</h4>
+<ul><li>中西合璧庭园，尤以玫瑰园著名</li><li>官邸本馆（部分区域开放参观）</li><li>家族使用过的温室与教堂</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>National Palace Museum<span class="zh">國立故宮博物院</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Home to one of the world's largest collections of Chinese imperial art and artifacts, most of it evacuated from Beijing's Forbidden City during the Chinese Civil War and moved to Taiwan in 1948–49; the museum opened at this Taipei site in 1965 and now holds nearly 700,000 pieces spanning 8,000 years.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The Jadeite Cabbage and Meat-shaped Stone, two of the museum's most iconic pieces</li><li>Song- and Qing-dynasty ceramics and calligraphy galleries</li><li>Bronze ritual vessels dating back to the Shang dynasty</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>国立故宫博物院收藏了全球数一数二的中国宫廷艺术珍品，多数文物于国共内战期间自北京故宫南迁，1948至49年间辗转运抵台湾，1965年在台北现址开馆，馆藏近70万件，横跨8000年历史。</p>
+<h4>看点推荐</h4>
+<ul><li>镇馆之宝翠玉白菜与肉形石</li><li>宋代、清代瓷器与书画展厅</li><li>商代青铜礼器</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Beitou Public Hot Spring<span class="zh">北投公園溫泉浴池</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Beitou's hot springs were developed commercially from 1896 under Japanese rule, making it one of Taiwan's earliest spa resort towns; the sulfurous Thermal Valley waters still feed the public bathhouses and parks that line the Beitou stream today.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Beitou Hot Spring Museum, a restored 1913 Japanese-era public bathhouse</li><li>Thermal Valley (Hell Valley), the steaming spring source</li><li>Public and private bathing options along Zhongshan Road</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>北投温泉自1896年日治时期起开发为温泉疗养地，是台湾最早的温泉观光区之一，硫磺泉水至今仍供应沿北投溪而建的公共与民营浴场。</p>
+<h4>看点推荐</h4>
+<ul><li>北投温泉博物馆，修复自1913年日治公共浴场</li><li>地热谷（地狱谷），温泉水源冒着白烟</li><li>中山路沿线的公共与私人浴场</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Shilin Night Market<span class="zh">士林夜市</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>One of Taipei's largest and most famous night markets, developing since the 1910s around the old Cixian Temple; today it combines a covered food basement with sprawling street stalls, and remains most visitors' first taste of Taiwanese night-market culture.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The underground food court for classics like oyster omelet and stinky tofu</li><li>Street-level clothing, games and snack stalls around Cixian Temple</li><li>Giant fried chicken cutlet (hashi da ji pai), a market icon</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>士林夜市是台北规模最大、最知名的夜市之一，自1910年代起在慈諴宫周边发展而成，如今结合地下美食广场与地面摊位，是许多游客体验台湾夜市文化的第一站。</p>
+<h4>看点推荐</h4>
+<ul><li>地下美食区：蚵仔煎、臭豆腐等经典小吃</li><li>地面摊位：服饰、游戏与小吃环绕慈諴宫</li><li>招牌大鸡排</li></ul>
+</div>
+</div>
+
+
+<footer>Guide prepared for personal trip use · History &amp; highlight notes are general background, please verify opening hours/tickets on-site · 本指南仅供个人行程参考，开放时间与票价请以现场公告为准</footer>
+</div>
+</body>
+</html>

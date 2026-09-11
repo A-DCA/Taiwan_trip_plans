@@ -1,83 +1,157 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>2026-11-07 notes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 7 · Kaohsiung</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", sans-serif; margin: 24px; background:#fafafa; color:#222; }
-  h2 { margin-bottom: 4px; }
-  a.back { display:inline-block; margin-bottom:16px; }
-  table { border-collapse: collapse; width: 100%; background:white; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #2A81CB; color: white; }
-  td.num { font-weight: bold; text-align:center; width:32px; }
-  td.time { white-space: nowrap; width:64px; }
-  td.mode { white-space: nowrap; width:90px; }
-  tr:nth-child(even) { background: #f4f7fb; }
-</style></head><body>
-<h2>2026-11-07</h2>
-<a class="back" href="2026-11-07_zh.html">&larr; back to map</a>
-<table>
-<tr><th>#</th><th>Time</th><th>中文</th><th>English</th><th>Mode</th><th>How to get here (+ notes)</th></tr>
-<tr>
-            <td class="num">1</td>
-            <td class="time">09:30</td>
-            <td class="name">高雄酒店</td>
-            <td class="name"> Kaohsiung Hotel</td>
-            <td class="mode"> </td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">2</td>
-            <td class="time">10:00</td>
-            <td class="name">美麗島站/光之穹頂</td>
-            <td class="name">Formosa Boulevard Station</td>
-            <td class="mode">🚶 walk</td>
-            <td class="note">take photos</td>
-        </tr><tr>
-            <td class="num">3</td>
-            <td class="time">10:15</td>
-            <td class="name">三鳳宮</td>
-            <td class="name">Sanfeng Temple</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">4</td>
-            <td class="time">11:00</td>
-            <td class="name">蓮池潭, 龍虎塔</td>
-            <td class="name">Lotus Pond &amp; Pagodas</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">Bus 205 zhonghua main line</td>
-        </tr><tr>
-            <td class="num">5</td>
-            <td class="time">14:00</td>
-            <td class="name">駁二藝術特區</td>
-            <td class="name">Pier-2 Art Center</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">Bus 219A to Hamasen Station and then walk to the next</td>
-        </tr><tr>
-            <td class="num">6</td>
-            <td class="time">15:30</td>
-            <td class="name">旗津岛 </td>
-            <td class="name">Qijin Island</td>
-            <td class="mode">⛴️ boat</td>
-            <td class="note">ferry from Hamasen Feeder to the next</td>
-        </tr><tr>
-            <td class="num">7</td>
-            <td class="time">14:00</td>
-            <td class="name">駁二藝術特區</td>
-            <td class="name">Pier-2 Art Center</td>
-            <td class="mode">⛴️ boat</td>
-            <td class="note">ferry back and  take Y-&gt;R lines to the next</td>
-        </tr><tr>
-            <td class="num">8</td>
-            <td class="time">19:00</td>
-            <td class="name">瑞豐夜市</td>
-            <td class="name">Ruifeng Night Market</td>
-            <td class="mode">🚇 mrt</td>
-            <td class="note">ferry from Hamasen Feeder to the next</td>
-        </tr><tr>
-            <td class="num">9</td>
-            <td class="time">09:30</td>
-            <td class="name">高雄酒店</td>
-            <td class="name"> Kaohsiung Hotel</td>
-            <td class="mode">🚇 mrt</td>
-            <td class="note">R lines to the next</td>
-        </tr>
+:root{--ink:#2b2420;--paper:#faf6ef;--accent:#b1502f;--accent2:#3a6b5a;--line:#e4dccb;}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding:0;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--accent),#7a3620);color:#fff;padding:34px 20px;text-align:center;}
+header.top h1{margin:0 0 6px;font-size:1.7em;}
+header.top p{margin:2px 0;opacity:.95;font-size:1.05em;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 14px;font-size:.85em;margin-top:8px;}
+h2.section{color:var(--accent);border-bottom:3px solid var(--line);padding-bottom:6px;margin-top:44px;font-size:1.3em;}
+h2.section .zh{font-weight:400;color:var(--accent2);font-size:.8em;margin-left:8px;}
+.route-table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.93em;background:#fff;}
+.route-table th{background:var(--accent2);color:#fff;padding:8px 10px;text-align:left;}
+.route-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.route-table tr:nth-child(even) td{background:#f4efe4;}
+.mode{display:inline-block;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;font-size:.85em;}
+.stop{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 20px;margin:18px 0;}
+.stop h3{margin:0 0 4px;color:var(--accent);font-size:1.15em;}
+.stop h3 .zh{color:var(--accent2);font-weight:500;font-size:.85em;margin-left:10px;}
+.stop .lbl{font-weight:700;color:var(--accent2);font-size:.9em;margin-top:10px;}
+.stop .lbl2{font-weight:700;color:#7a5b1e;font-size:.88em;margin-top:8px;}
+.note{background:#fff7e6;border:1px solid #ecd9a8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.note b{color:#a4651a;}
+.flag{background:#fdecec;border:1px solid #f3b9b9;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.flag b{color:#b1332f;}
+.zhblock{font-family:'Noto Sans SC','Noto Sans TC',sans-serif;color:#4a4237;background:#f6f1e6;border-radius:8px;padding:14px 18px;margin-top:8px;}
+.zhblock h4{margin:0 0 6px;color:var(--accent2);font-size:1em;}
+footer{text-align:center;color:#8a8072;font-size:.85em;margin-top:50px;}
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-top:20px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>Day 7 · Kaohsiung</h1>
+<p>07 Nov 2026 — Formosa Blvd, Lotus Pond, Pier-2 & Qijin Island</p>
+<span class="badge">07 Nov 2026</span>
+</header>
+<h2 class="section">Route Overview <span class="zh">路线总览</span></h2>
+<table class="route-table"><tr><th>Time</th><th>Stop / 地点</th><th>Transport</th><th>Duration</th><th>Notes</th></tr>
+<tr><td>09:30</td><td>Kaohsiung Hotel<br><span style="color:#7a5b1e">高雄酒店</span></td><td><span class="mode">-</span></td><td>-</td><td>Depart hotel</td></tr>
+<tr><td>10:00</td><td>Formosa Boulevard Station<br><span style="color:#7a5b1e">美麗島站/光之穹頂</span></td><td><span class="mode">walk</span></td><td>~10 min</td><td>Take photos of the Dome of Light</td></tr>
+<tr><td>10:15</td><td>Sanfeng Temple<br><span style="color:#7a5b1e">三鳳宮</span></td><td><span class="mode">bus</span></td><td>~15 min</td><td>-</td></tr>
+<tr><td>11:00</td><td>Lotus Pond & Pagodas<br><span style="color:#7a5b1e">蓮池潭，龍虎塔</span></td><td><span class="mode">bus</span></td><td>~40 min</td><td>Bus 205, Zhonghua main line</td></tr>
+<tr><td>14:00</td><td>Pier-2 Art Center<br><span style="color:#7a5b1e">駁二藝術特區</span></td><td><span class="mode">bus</span></td><td>~45 min</td><td>Bus 219A to Hamasen Station, then walk</td></tr>
+<tr><td>15:30</td><td>Qijin Island<br><span style="color:#7a5b1e">旗津島</span></td><td><span class="mode">boat</span></td><td>~15 min</td><td>Ferry from Hamasen pier</td></tr>
+<tr><td>~17:30</td><td>Pier-2 Art Center<br><span style="color:#7a5b1e">駁二藝術特區</span></td><td><span class="mode">boat</span></td><td>~15 min</td><td>Return ferry, then MRT/rail lines onward</td></tr>
+<tr><td>19:00</td><td>Ruifeng Night Market<br><span style="color:#7a5b1e">瑞豐夜市</span></td><td><span class="mode">MRT</span></td><td>~35 min</td><td>Y/R lines connection</td></tr>
+<tr><td>~21:00</td><td>Kaohsiung Hotel<br><span style="color:#7a5b1e">高雄酒店</span></td><td><span class="mode">MRT</span></td><td>~25 min</td><td>R line back to hotel</td></tr>
 </table>
-</body></html>
+<h2 class="section">Transport Check &amp; Alternatives <span class="zh">交通核实与建议</span></h2>
+<div class="note"><b>✓ Transport note:</b> The overall loop (Formosa Blvd → Sanfeng Temple → Lotus Pond → Pier-2 → Qijin → Ruifeng Market → hotel) sensibly moves from downtown north to Lotus Pond, back south to the harbor, then out to Ruifeng in the north again — the one inefficiency is that Ruifeng Market sits close to Lotus Pond, so you effectively backtrack north twice.</div>
+<div class="flag"><b>⚠ Route check:</b> There is a large gap between 11:00 (arrive Lotus Pond) and 14:00 (depart Pier-2) with no stated departure time from Lotus Pond — likely 2–2.5 hours are spent at Lotus Pond itself (reasonable, since the pagodas, temples and lakeside walk can fill that time), but consider noting an explicit 'depart ~13:15' so the 45-minute Lotus Pond→Pier-2 bus leg is accounted for.</div>
+<div class="note"><b>✓ Transport note:</b> Bus 205 (Lotus Pond → Pier-2 area) exists but Kaohsiung's Circular Light Rail (LRT) or a Red Line MRT + short walk can be faster and more scenic alternatives if the bus is delayed in traffic — worth checking both options on Google Maps that morning.</div>
+<div class="flag"><b>⚠ Route check:</b> Since Ruifeng Night Market is only about 2 km from Lotus Pond (both in the northern Sanmin/Zuoying area), an easy optimization would be to visit Ruifeng Market right after Lotus Pond instead of returning there late in the evening after Pier-2/Qijin — this would save one long backtrack across the city. Consider swapping the order to: Sanfeng Temple → Lotus Pond → Ruifeng Market (lunch) → Pier-2 → Qijin → back to hotel by ferry/MRT.</div>
+<div class="note"><b>✓ Transport note:</b> The Qijin ferry from Hamasen (Gushan Ferry Pier) is correct and frequent (every 5–10 min, very short crossing) — a good, low-effort way to reach the island without a bridge detour.</div>
+<h2 class="section">Places — History &amp; Highlights <span class="zh">景点介绍与看点</span></h2>
+
+<div class="stop">
+<h3>Formosa Boulevard Station — Dome of Light<span class="zh">美麗島站/光之穹頂</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Named for the 1979 Kaohsiung Incident (a pro-democracy protest at this site that became a turning point in Taiwan's democratization), this MRT interchange station is home to the 'Dome of Light,' the world's largest glass artwork, created by Italian artist Narcissus Quagliata and unveiled in 2008.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The 30-metre glass dome depicting the themes of water, earth, light and fire</li><li>Light shows at set times daily, synced with music</li><li>Historical plaques recalling the 1979 Kaohsiung Incident</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>美丽岛站因1979年在此发生、成为台湾民主化重要转折点的"美丽岛事件"而得名，站内的"光之穹顶"由意大利艺术家水仙大师设计，2008年落成，是全球最大的玻璃公共艺术作品。</p>
+<h4>看点推荐</h4>
+<ul><li>直径30米的玻璃穹顶，主题涵盖水、土、光、火</li><li>每日定时灯光音乐秀</li><li>站内展示1979年美丽岛事件相关历史资料</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Sanfeng Temple<span class="zh">三鳳宮</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>One of Kaohsiung's largest and most elaborately decorated Taoist temples, dedicated to Marshal Wen; the current grand structure dates to a 1970s rebuilding of a much older shrine, and it remains a major center for local folk religion and temple festivals.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Elaborate multi-tiered roof with dense dragon and phoenix ornamentation</li><li>The temple's large forecourt, active during festivals and ceremonies</li><li>Traditional incense and offering rituals typical of southern Taiwanese folk temples</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>三凤宫是高雄规模最大、装饰最华丽的道教庙宇之一，主祀温府千岁，现今宏伟庙貌为1970年代在古庙基础上重建而成，至今仍是当地民间信仰与庙会活动的重要中心。</p>
+<h4>看点推荐</h4>
+<ul><li>层叠繁复的屋顶与密集的龙凤雕饰</li><li>庙前广场，庙会期间热闹非凡</li><li>典型南台湾民间庙宇的上香祭拜仪式</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Lotus Pond & the Dragon and Tiger Pagodas<span class="zh">蓮池潭與龍虎塔</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A scenic reservoir built in the Qing dynasty for irrigation, Lotus Pond became ringed with temples through the 20th century; its most famous landmark, the Dragon and Tiger Pagodas, was built in 1976 — visitors traditionally enter through the dragon's mouth and exit through the tiger's, symbolically turning bad luck into good.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The twin seven-story Dragon and Tiger Pagodas with painted interior murals of folklore scenes</li><li>Spring and Autumn Pavilions and other lakeside temples ringing the pond</li><li>A lakeside walking path with views of the Kaohsiung skyline in the distance</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>莲池潭是清代为灌溉所建的水潭，20世纪起周边庙宇林立；最著名的地标龙虎塔建于1976年，传统上从龙口进、虎口出，象征化解厄运、转祸为福。</p>
+<h4>看点推荐</h4>
+<ul><li>七层高的龙虎双塔，塔内绘有精美的民间故事壁画</li><li>环潭而建的春秋阁等多座庙宇</li><li>环潭步道可远眺高雄市区天际线</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Pier-2 Art Center<span class="zh">駁二藝術特區</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A cluster of disused 1970s harbor warehouses near Kaohsiung's old harbor, converted from 2000 onward into one of Taiwan's leading contemporary art and creative districts — part of a broader transformation of Kaohsiung's industrial waterfront into public cultural space.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Large-scale outdoor sculptures and murals scattered across the warehouse district</li><li>Rotating contemporary art exhibitions inside the converted warehouses</li><li>Light rail (LRT) and harbor views right at the district's edge</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>驳二艺术特区由高雄旧港区1970年代废弃仓库群改造而成，自2000年起逐步发展为台湾重要的当代艺术与文创聚落，也是高雄港区工业地景转型为公共文化空间的代表案例。</p>
+<h4>看点推荐</h4>
+<ul><li>仓库区散布的大型户外雕塑与壁画</li><li>仓库内定期更换的当代艺术展览</li><li>紧邻轻轨站与港湾景观</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Qijin Island<span class="zh">旗津島</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A narrow sandbar island at the mouth of Kaohsiung Harbor, Qijin was the site of the first Han Chinese settlement in the Kaohsiung area in the 17th century and later became a key defensive point, evidenced by its historic fort and lighthouse.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Cihou Fort, a Qing-dynasty coastal defense fortification with cannon emplacements</li><li>Kaohsiung Lighthouse, offering harbor-mouth views</li><li>Rainbow Church and the beachfront promenade, popular for sunset photos and seafood</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>旗津岛是高雄港口外的狭长沙洲岛屿，17世纪为高雄地区最早的汉人聚落之一，后因地理位置重要成为海防要地，岛上的旗后炮台与灯塔即为见证。</p>
+<h4>看点推荐</h4>
+<ul><li>旗后炮台，清代海防设施，保留炮座遗迹</li><li>高雄灯塔，可眺望港口景色</li><li>彩虹教堂与海滨步道，是拍摄日落与品尝海鲜的热门去处</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Ruifeng Night Market<span class="zh">瑞豐夜市</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>A newer, locals-favored night market that emerged in the 1990s in Kaohsiung's Lingya district, purpose-built as an organized night-market compound (unlike older markets that grew organically along streets) — known for a broader mix of stalls and a more spacious layout.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>A wide variety of Taiwanese street food stalls in a grid layout, easier to navigate than older markets</li><li>Games and stalls popular with local families, giving a more 'everyday Kaohsiung' feel than tourist-oriented markets</li><li>Later opening hours than most markets, running well past 1am on weekends</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>瑞丰夜市是1990年代于高雄苓雅区兴起、以规划方式集中设立的夜市（不同于沿街自然形成的老夜市），以摊位种类丰富、动线宽敞而受当地人喜爱。</p>
+<h4>看点推荐</h4>
+<ul><li>棋盘式动线，摊位种类多样，比传统夜市更好逛</li><li>深受本地家庭喜爱的游戏与小吃摊，更具道地高雄生活气息</li><li>营业时间较晚，周末常营业至凌晨</li></ul>
+</div>
+</div>
+
+
+<footer>Guide prepared for personal trip use · History &amp; highlight notes are general background, please verify opening hours/tickets on-site · 本指南仅供个人行程参考，开放时间与票价请以现场公告为准</footer>
+</div>
+</body>
+</html>

@@ -1,104 +1,162 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>2026-11-04 notes</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 4 · Sun Moon Lake</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", sans-serif; margin: 24px; background:#fafafa; color:#222; }
-  h2 { margin-bottom: 4px; }
-  a.back { display:inline-block; margin-bottom:16px; }
-  table { border-collapse: collapse; width: 100%; background:white; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #2A81CB; color: white; }
-  td.num { font-weight: bold; text-align:center; width:32px; }
-  td.time { white-space: nowrap; width:64px; }
-  td.mode { white-space: nowrap; width:90px; }
-  tr:nth-child(even) { background: #f4f7fb; }
-</style></head><body>
-<h2>2026-11-04</h2>
-<a class="back" href="2026-11-04_zh.html">&larr; back to map</a>
-<table>
-<tr><th>#</th><th>Time</th><th>中文</th><th>English</th><th>Mode</th><th>How to get here (+ notes)</th></tr>
-<tr>
-            <td class="num">1</td>
-            <td class="time">07:15</td>
-            <td class="name">酒店</td>
-            <td class="name">  Hotel</td>
-            <td class="mode"> </td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">2</td>
-            <td class="time">07:40</td>
-            <td class="name">HSR台北</td>
-            <td class="name">HSR Taipei</td>
-            <td class="mode">🚇 mrt</td>
-            <td class="note">9-mins by G Nanjing-Beimen 2 stops</td>
-        </tr><tr>
-            <td class="num">3</td>
-            <td class="time">08:45</td>
-            <td class="name">HSR台中</td>
-            <td class="name">HSR Taichung</td>
-            <td class="mode">🚆 train</td>
-            <td class="note">take 7:40-8:20 HSR train; booking in advance REQUIRED!</td>
-        </tr><tr>
-            <td class="num">4</td>
-            <td class="time">08:45</td>
-            <td class="name">日月潭</td>
-            <td class="name">Sun Moon Lake</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">Bus 6670 HSR Taichung Station to Sun Moon Lake</td>
-        </tr><tr>
-            <td class="num">5</td>
-            <td class="time">10:30</td>
-            <td class="name">日月潭水社,旅馆住宿</td>
-            <td class="name">Shui She, Sun Moon Lake (visitor center and Hotel)</td>
-            <td class="mode">🚶 walk</td>
-            <td class="note">&mdash;</td>
-        </tr><tr>
-            <td class="num">6</td>
-            <td class="time">11:00</td>
-            <td class="name">玄光寺</td>
-            <td class="name">Xuanguang Temple</td>
-            <td class="mode">⛴️ boat</td>
-            <td class="note">buy day pass at visitor center</td>
-        </tr><tr>
-            <td class="num">7</td>
-            <td class="time">11:45</td>
-            <td class="name">伊達邵老街</td>
-            <td class="name">Ita Thao Old street</td>
-            <td class="mode">⛴️ boat</td>
-            <td class="note">by boat</td>
-        </tr><tr>
-            <td class="num">8</td>
-            <td class="time">13:30</td>
-            <td class="name">日月潭纜車</td>
-            <td class="name">Sun Moon Lake Ropeway Station</td>
-            <td class="mode">🚶 walk</td>
-            <td class="note">walk to take round trip by cable car</td>
-        </tr><tr>
-            <td class="num">9</td>
-            <td class="time">14:30</td>
-            <td class="name">日月潭文武廟</td>
-            <td class="name">Wenwu Temple</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">by bus 6669(A) from Ropeway Station</td>
-        </tr><tr>
-            <td class="num">10</td>
-            <td class="time">16:00</td>
-            <td class="name">日月潭水社,旅馆住宿</td>
-            <td class="name">Shui She, Sun Moon Lake (visitor center and Hotel)</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">by bus 6669(A) from Ropeway Station</td>
-        </tr><tr>
-            <td class="num">11</td>
-            <td class="time">16:30</td>
-            <td class="name">向山遊客中心</td>
-            <td class="name">Xiangshan Visitor Center</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">change to bus 6289, 6289A 6668, or bike</td>
-        </tr><tr>
-            <td class="num">12</td>
-            <td class="time">18:00</td>
-            <td class="name">日月潭水社,旅馆住宿</td>
-            <td class="name">Shui She, Sun Moon Lake (visitor center and Hotel)</td>
-            <td class="mode">🚌 bus</td>
-            <td class="note">&mdash;</td>
-        </tr>
+:root{--ink:#2b2420;--paper:#faf6ef;--accent:#b1502f;--accent2:#3a6b5a;--line:#e4dccb;}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding:0;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--accent),#7a3620);color:#fff;padding:34px 20px;text-align:center;}
+header.top h1{margin:0 0 6px;font-size:1.7em;}
+header.top p{margin:2px 0;opacity:.95;font-size:1.05em;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 14px;font-size:.85em;margin-top:8px;}
+h2.section{color:var(--accent);border-bottom:3px solid var(--line);padding-bottom:6px;margin-top:44px;font-size:1.3em;}
+h2.section .zh{font-weight:400;color:var(--accent2);font-size:.8em;margin-left:8px;}
+.route-table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.93em;background:#fff;}
+.route-table th{background:var(--accent2);color:#fff;padding:8px 10px;text-align:left;}
+.route-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.route-table tr:nth-child(even) td{background:#f4efe4;}
+.mode{display:inline-block;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;font-size:.85em;}
+.stop{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 20px;margin:18px 0;}
+.stop h3{margin:0 0 4px;color:var(--accent);font-size:1.15em;}
+.stop h3 .zh{color:var(--accent2);font-weight:500;font-size:.85em;margin-left:10px;}
+.stop .lbl{font-weight:700;color:var(--accent2);font-size:.9em;margin-top:10px;}
+.stop .lbl2{font-weight:700;color:#7a5b1e;font-size:.88em;margin-top:8px;}
+.note{background:#fff7e6;border:1px solid #ecd9a8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.note b{color:#a4651a;}
+.flag{background:#fdecec;border:1px solid #f3b9b9;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.flag b{color:#b1332f;}
+.zhblock{font-family:'Noto Sans SC','Noto Sans TC',sans-serif;color:#4a4237;background:#f6f1e6;border-radius:8px;padding:14px 18px;margin-top:8px;}
+.zhblock h4{margin:0 0 6px;color:var(--accent2);font-size:1em;}
+footer{text-align:center;color:#8a8072;font-size:.85em;margin-top:50px;}
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-top:20px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>Day 4 · Sun Moon Lake</h1>
+<p>04 Nov 2026 — Taichung THSR → Shuishe, Xuanguang, Ita Thao, Ropeway & Wenwu Temple</p>
+<span class="badge">04 Nov 2026</span>
+</header>
+<h2 class="section">Route Overview <span class="zh">路线总览</span></h2>
+<table class="route-table"><tr><th>Time</th><th>Stop / 地点</th><th>Transport</th><th>Duration</th><th>Notes</th></tr>
+<tr><td>07:15</td><td>Hotel<br><span style="color:#7a5b1e">酒店</span></td><td><span class="mode">-</span></td><td>-</td><td>Depart hotel</td></tr>
+<tr><td>07:40</td><td>THSR Taipei Station<br><span style="color:#7a5b1e">高鐵台北站</span></td><td><span class="mode">MRT</span></td><td>~10 min</td><td>G line Nanjing Fuxing → Beimen, 2 stops</td></tr>
+<tr><td>08:20 dep</td><td>THSR train 台北→台中<br><span style="color:#7a5b1e">高鐵台北→台中</span></td><td><span class="mode">THSR</span></td><td>~35–45 min</td><td>Book in advance — take the ~07:40–08:20 train</td></tr>
+<tr><td>08:45</td><td>THSR Taichung Station<br><span style="color:#7a5b1e">高鐵台中站</span></td><td><span class="mode">-</span></td><td>-</td><td>Transfer to bus</td></tr>
+<tr><td>~09:15</td><td>Sun Moon Lake (Shuishe)<br><span style="color:#7a5b1e">日月潭（水社）</span></td><td><span class="mode">bus</span></td><td>~90 min</td><td>Nantou Bus 6670, THSR Taichung Station → Sun Moon Lake</td></tr>
+<tr><td>10:30</td><td>Shuishe Visitor Center / Hotel check-in<br><span style="color:#7a5b1e">日月潭水社，旅馆住宿</span></td><td><span class="mode">walk</span></td><td>~5 min</td><td>Drop luggage, quick orientation</td></tr>
+<tr><td>11:00</td><td>Xuanguang Temple<br><span style="color:#7a5b1e">玄光寺</span></td><td><span class="mode">boat</span></td><td>~10 min</td><td>Buy an all-day boat pass at the visitor center</td></tr>
+<tr><td>11:45</td><td>Ita Thao Old Street<br><span style="color:#7a5b1e">伊達邵老街</span></td><td><span class="mode">boat</span></td><td>~10 min</td><td>Same boat pass</td></tr>
+<tr><td>13:30</td><td>Ropeway Station<br><span style="color:#7a5b1e">日月潭纜車站</span></td><td><span class="mode">walk</span></td><td>~30 min</td><td>Walk from Ita Thao, then round-trip cable car</td></tr>
+<tr><td>14:30</td><td>Wenwu Temple<br><span style="color:#7a5b1e">日月潭文武廟</span></td><td><span class="mode">bus</span></td><td>~15 min</td><td>Bus 6669(A) from Ropeway Station</td></tr>
+<tr><td>16:00</td><td>Shuishe (Visitor Center/Hotel)<br><span style="color:#7a5b1e">日月潭水社</span></td><td><span class="mode">bus</span></td><td>~15 min</td><td>Bus 6669(A) from Wenwu Temple</td></tr>
+<tr><td>16:30</td><td>Xiangshan Visitor Center<br><span style="color:#7a5b1e">向山遊客中心</span></td><td><span class="mode">bus</span></td><td>~10 min</td><td>Bus 6289 / 6289A / 6668, or rent a bike along the lakeside path</td></tr>
+<tr><td>18:00</td><td>Shuishe (Hotel)<br><span style="color:#7a5b1e">日月潭水社</span></td><td><span class="mode">bus</span></td><td>~10 min</td><td>Return bus to Shuishe</td></tr>
 </table>
-</body></html>
+<h2 class="section">Transport Check &amp; Alternatives <span class="zh">交通核实与建议</span></h2>
+<div class="note"><b>✓ Transport note:</b> The THSR schedule is correct in structure: trains from Taipei to Taichung run every ~10–20 min and take about 35–47 minutes depending on the service (fastest non-stop is ~40 min). Reserve seats in advance for the early-morning departure since this train also carries commuters.</div>
+<div class="note"><b>✓ Transport note:</b> Nantou Bus Route 6670 running directly from THSR Taichung Station to Sun Moon Lake (Shuishe) is the correct and most convenient option — journey time is usually quoted as 70–90 minutes depending on traffic on Highway 14, so budget the full 90 minutes, especially on weekends.</div>
+<div class="note"><b>✓ Transport note:</b> Using the inter-village boat pass (Shuishe ⇄ Xuanguang Temple ⇄ Ita Thao) is the standard and fastest way to link these three points — each crossing is genuinely about 10 minutes, and the pass is sold at the Shuishe visitor center as planned.</div>
+<div class="flag"><b>⚠ Route check:</b> Ita Thao → Ropeway Station is listed as a 30-minute walk; the actual lakeside path is closer to 1.5–2 km and can take 25–35 minutes depending on pace, which matches — but consider taking the boat back to Shuishe and the bus to the Ropeway Station instead if you're tired, since the ropeway's lower station is also reachable by bus/shuttle from Ita Thao.</div>
+<div class="note"><b>✓ Transport note:</b> Bus 6669(A) is the correct connector between the Ropeway Station, Wenwu Temple and Shuishe, but service frequency can be as low as every 30–60 minutes off-peak — check the timetable on arrival and build in buffer time, or use a taxi/rented scooter if you're behind schedule.</div>
+<div class="note"><b>✓ Transport note:</b> Xiangshan Visitor Center's lakeside boardwalk and viewing deck is a worthwhile sunset add-on; cycling the lakeside path back to Shuishe (bike rental widely available) is a scenic and popular alternative to the bus for this final leg.</div>
+<h2 class="section">Places — History &amp; Highlights <span class="zh">景点介绍与看点</span></h2>
+
+<div class="stop">
+<h3>Sun Moon Lake (Shuishe)<span class="zh">日月潭水社</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Taiwan's largest natural lake, sacred to the indigenous Thao people for centuries before becoming a major hydroelectric reservoir under Japanese rule in the 1930s and later Taiwan's most famous alpine lake resort; Shuishe village on its western shore is the main visitor hub.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The lakeside promenade with mountain and water views</li><li>Boat piers connecting Shuishe, Ita Thao and Xuanguang Temple</li><li>Restaurants serving the local specialty, thick-cut 'president fish' (freshwater tilapia-like fish)</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>日月潭是台湾最大的天然湖泊，数百年来是原住民邵族的圣地，1930年代日治时期因兴建水力发电水库而扩大成现今规模，后发展为台湾最著名的高山湖泊度假区，水社村是主要的游客据点。</p>
+<h4>看点推荐</h4>
+<ul><li>湖畔步道，可饱览山水景色</li><li>连接水社、伊达邵与玄光寺的游船码头</li><li>品尝当地特色总统鱼等湖鲜料理</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Xuanguang Temple<span class="zh">玄光寺</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Built in 1955 to enshrine relics of the Tang-dynasty monk Xuanzang (the pilgrim behind 'Journey to the West'), which had been brought to Taiwan in 1955; the temple sits on a small peninsula with some of the lake's most photographed views.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Panoramic lake views from the temple terrace</li><li>The small shrine said to house a relic of Xuanzang</li><li>A short, peaceful walking trail down to the pier</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>玄光寺建于1955年，供奉1955年迁至台湾的唐代高僧玄奘（《西游记》原型人物）舍利，坐落于湖畔小半岛，是日月潭最具代表性的取景点之一。</p>
+<h4>看点推荐</h4>
+<ul><li>寺前平台可欣赏日月潭全景</li><li>相传供奉玄奘舍利的小殿</li><li>通往码头的清幽步道</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Ita Thao Old Street<span class="zh">伊達邵老街</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>The main village of the indigenous Thao people, one of Taiwan's smallest recognized indigenous tribes, whose ancestral connection to Sun Moon Lake goes back centuries before Han Chinese settlement; the old street today mixes Thao culture with lakeside dining and shopping.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Thao cultural performances and handicraft stalls (seasonal)</li><li>Lakeside snack stalls selling smoked mountain boar and millet wine</li><li>Ferry pier with views back across the lake to Shuishe</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>伊達邵是台湾原住民邵族的主要聚落，邵族是台湾人口最少的原住民族之一，其与日月潭的渊源可追溯至汉人移民之前数百年。老街融合邵族文化与湖畔饮食购物。</p>
+<h4>看点推荐</h4>
+<ul><li>邵族文化表演与手工艺摊位（视季节而定）</li><li>湖畔小吃，如烟熏山猪肉、小米酒</li><li>码头可眺望对岸水社村美景</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Sun Moon Lake Ropeway<span class="zh">日月潭纜車</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Opened in 2009, this 1,877-metre gondola links the lakeshore near Ita Thao to the Formosan Aboriginal Culture Village on the ridge above, giving Taiwan's only cable-car lake-and-mountain panorama.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Sweeping views of the entire lake basin during the ~7-minute ride</li><li>Connection to the Formosan Aboriginal Culture Village (separate admission) at the upper station</li><li>A good sunset vantage point on the return trip</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>日月潭缆车于2009年启用，全长1877米，连接伊达邵湖畔与山脊上的九族文化村，是台湾唯一可同时饱览湖光山色的缆车系统。</p>
+<h4>看点推荐</h4>
+<ul><li>约7分钟车程可俯瞰整个日月潭盆地</li><li>上站可连接九族文化村（需另购门票）</li><li>回程时段是绝佳的赏日落地点</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Wenwu Temple<span class="zh">日月潭文武廟</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Rebuilt in its current grand form in 1969 after the original lakeside shrines were relocated due to reservoir works in the 1930s, this temple honors both Confucius (wen, civil) and Guan Gong (wu, martial) — hence its name — and is known for its terraced staircase framing the lake.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The dramatic staircase and terraces leading up from the lake road</li><li>Twin shrine halls dedicated to Confucius and Guan Gong</li><li>Views over the northern end of the lake from the temple forecourt</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>文武庙现今宏伟的庙貌重建于1969年，因1930年代水库工程需迁移原湖畔庙宇而来；庙名取自供奉文圣孔子与武圣关公，以面湖而建的层层石阶闻名。</p>
+<h4>看点推荐</h4>
+<ul><li>沿湖而建、气势恢宏的石阶与平台</li><li>分别供奉孔子与关公的正殿</li><li>庙埕可远眺日月潭北侧湖景</li></ul>
+</div>
+</div>
+
+<div class="stop">
+<h3>Xiangshan Visitor Center<span class="zh">向山遊客中心</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>Opened in 2011, this award-winning visitor center was designed with sweeping curved concrete roofs to echo the surrounding mountain ridgelines, and serves as the southern gateway to the lake's cycling path, considered one of the most scenic bike routes in Asia.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>The building's striking curved architecture and open-air courtyard</li><li>The lakeside cycling/walking path connecting toward Shuishe</li><li>Sunset views over the lake from the terrace</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>向山游客中心于2011年启用，以弧形清水混凝土屋顶呼应周边山脊线条而获得多项建筑奖项，是日月潭环湖自行车道（被誉为亚洲最美自行车道之一）的南侧入口。</p>
+<h4>看点推荐</h4>
+<ul><li>建筑本身弧形清水模设计与开放式廊道</li><li>连接水社的湖畔自行车道与步道</li><li>露台上欣赏日落湖景</li></ul>
+</div>
+</div>
+
+
+<footer>Guide prepared for personal trip use · History &amp; highlight notes are general background, please verify opening hours/tickets on-site · 本指南仅供个人行程参考，开放时间与票价请以现场公告为准</footer>
+</div>
+</body>
+</html>

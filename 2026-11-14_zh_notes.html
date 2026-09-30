@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 14 · Zhujiajiao Water Town</title>
+<style>
+:root{--ink:#2b2420;--paper:#faf6ef;--accent:#b1502f;--accent2:#3a6b5a;--line:#e4dccb;}
+*{box-sizing:border-box}
+body{font-family:'Noto Sans TC','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);margin:0;padding:0;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 60px;}
+header.top{background:linear-gradient(135deg,var(--accent),#7a3620);color:#fff;padding:34px 20px;text-align:center;}
+header.top h1{margin:0 0 6px;font-size:1.7em;}
+header.top p{margin:2px 0;opacity:.95;font-size:1.05em;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 14px;font-size:.85em;margin-top:8px;}
+h2.section{color:var(--accent);border-bottom:3px solid var(--line);padding-bottom:6px;margin-top:44px;font-size:1.3em;}
+h2.section .zh{font-weight:400;color:var(--accent2);font-size:.8em;margin-left:8px;}
+.route-table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.93em;background:#fff;}
+.route-table th{background:var(--accent2);color:#fff;padding:8px 10px;text-align:left;}
+.route-table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.route-table tr:nth-child(even) td{background:#f4efe4;}
+.mode{display:inline-block;background:var(--accent2);color:#fff;border-radius:4px;padding:1px 8px;font-size:.85em;}
+.stop{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 20px;margin:18px 0;}
+.stop h3{margin:0 0 4px;color:var(--accent);font-size:1.15em;}
+.stop h3 .zh{color:var(--accent2);font-weight:500;font-size:.85em;margin-left:10px;}
+.stop .lbl{font-weight:700;color:var(--accent2);font-size:.9em;margin-top:10px;}
+.stop .lbl2{font-weight:700;color:#7a5b1e;font-size:.88em;margin-top:8px;}
+.note{background:#fff7e6;border:1px solid #ecd9a8;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.note b{color:#a4651a;}
+.flag{background:#fdecec;border:1px solid #f3b9b9;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.92em;}
+.flag b{color:#b1332f;}
+.zhblock{font-family:'Noto Sans SC','Noto Sans TC',sans-serif;color:#4a4237;background:#f6f1e6;border-radius:8px;padding:14px 18px;margin-top:8px;}
+.zhblock h4{margin:0 0 6px;color:var(--accent2);font-size:1em;}
+footer{text-align:center;color:#8a8072;font-size:.85em;margin-top:50px;}
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 20px;margin-top:20px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<h1>Day 14 · Zhujiajiao Water Town</h1>
+<p>14 Nov 2026 — A Half-Day Trip to Shanghai's Jiangnan Water Town</p>
+<span class="badge">14 Nov 2026</span>
+</header>
+<h2 class="section">Route Overview <span class="zh">路线总览</span></h2>
+<table class="route-table"><tr><th>Time</th><th>Stop / 地点</th><th>Transport</th><th>Duration</th><th>Notes</th></tr>
+<tr><td>10:00</td><td>Nanquan Beilu (Hotel)<br><span style="color:#7a5b1e">中電大酒店</span></td><td><span class="mode">-</span></td><td>-</td><td>Depart hotel</td></tr>
+<tr><td>~13:30–14:00</td><td>(depart for Zhujiajiao)<br><span style="color:#7a5b1e">前往朱家角</span></td><td><span class="mode">MRT</span></td><td>~120 min</td><td>Lines 2 + 17, transfer — see note on timing</td></tr>
+<tr><td>16:00</td><td>Zhujiajiao Water Town<br><span style="color:#7a5b1e">朱家角</span></td><td><span class="mode">MRT</span></td><td>~120 min</td><td>Arrival, per the plan</td></tr>
+<tr><td>~17:30–18:00</td><td>(depart Zhujiajiao)<br><span style="color:#7a5b1e">從朱家角出發</span></td><td><span class="mode">MRT</span></td><td>~120 min</td><td>Lines 17 + 2, transfer — see note</td></tr>
+<tr><td>~20:00</td><td>Nanquan Beilu (Hotel)<br><span style="color:#7a5b1e">中電大酒店</span></td><td><span class="mode">MRT</span></td><td>~120 min</td><td>Return, per the plan</td></tr>
+</table>
+<h2 class="section">Transport Check &amp; Alternatives <span class="zh">交通核实与建议</span></h2>
+<div class="flag"><b>⚠ Route check:</b> The timings as given don't quite add up: departing the hotel at 10:00 but only arriving at Zhujiajiao at 16:00 (a 6-hour gap) with a stated transit time of just 120 minutes, and then a 16:00→18:00 return window that's also only 120 minutes' stated transit. Most likely you're meant to leave the hotel around 13:30–14:00 (so the 2-hour metro ride lands you at 16:00), spend under 2 hours in Zhujiajiao, and leave around 17:30–18:00 for a similar-length return — I've adjusted the suggested departure times above accordingly; please confirm against your actual plan.</div>
+<div class="note"><b>✓ Transport note:</b> Metro Line 2 + Line 17 (with a transfer, likely at Songze Avenue or a similar interchange) is the correct and standard public-transport route from central Shanghai out to Zhujiajiao in the far western suburbs — a ~120-minute one-way journey each way is realistic given the distance (~40 km from central Shanghai).</div>
+<div class="flag"><b>⚠ Route check:</b> With only roughly 1.5–2 hours actually at Zhujiajiao once travel time is accounted for, you'll only have time for a brief highlight walk (the main canal, Fangsheng Bridge, one or two lanes) rather than a full exploration of the water town — if Zhujiajiao is a priority, consider leaving the hotel earlier (late morning) to allow 3+ hours on site, since 4 hours of round-trip travel for under 2 hours on-site is a lot of transit for the time gained.</div>
+<div class="note"><b>✓ Transport note:</b> If metro timing proves inconvenient, a direct bus (e.g. Huzhu Highway bus lines) or a taxi/ride-hail (~45–60 min each way, more expensive but faster and door-to-door) are the usual alternatives visitors use to reach Zhujiajiao.</div>
+<h2 class="section">Places — History &amp; Highlights <span class="zh">景点介绍与看点</span></h2>
+
+<div class="stop">
+<h3>Zhujiajiao Water Town<span class="zh">朱家角</span></h3>
+<div class="lbl">History &amp; Background</div>
+<p>One of the best-preserved of the 'Jiangnan water towns' near Shanghai, Zhujiajiao's canal-side settlement dates back over 1,700 years, with most of its surviving stone bridges, bluestone lanes and waterside houses built during the Ming and Qing dynasties, when it flourished as a rice and silk trading post connected by boat to the wider Yangtze delta.</p>
+<div class="lbl">Highlights — What to See</div>
+<ul><li>Fangsheng Bridge, a five-arch Ming-dynasty stone bridge (1571) spanning the main canal, the town's best-known landmark</li><li>Canal-side lanes lined with Ming/Qing-era shophouses, now housing tea houses, snack stalls and craft shops</li><li>Short sightseeing boat rides along the canal, offering a classic water-town photo angle</li></ul>
+<div class="zhblock">
+<h4>简介与历史</h4>
+<p>朱家角是上海周边保存最完好的江南水乡古镇之一，聚落历史可追溯至1700多年前，现存大部分石桥、石板巷弄与临水民居建于明清两代，当年因水运发达，是连接长江三角洲的重要稻米与丝绸贸易集散地。</p>
+<h4>看点推荐</h4>
+<ul><li>放生桥，建于明隆庆五年（1571年）的五孔石拱桥，横跨主河道，是古镇最著名地标</li><li>沿河明清风格老街，如今遍布茶馆、小吃摊与手工艺品店</li><li>短程摇橹船游河，是拍摄水乡风情的经典角度</li></ul>
+</div>
+</div>
+
+
+<footer>Guide prepared for personal trip use · History &amp; highlight notes are general background, please verify opening hours/tickets on-site · 本指南仅供个人行程参考，开放时间与票价请以现场公告为准</footer>
+</div>
+</body>
+</html>
